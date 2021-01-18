@@ -26,11 +26,13 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'rails_admin'
 gem 'jquery-rails'
 gem 'bootstrap'
 gem 'pg'
 gem 'devise'
 gem 'dotenv-rails'
+gem "font-awesome-rails"
 gem 'cancancan'
 gem 'omniauth-linkedin-oauth2'
 gem 'activerecord-session_store'

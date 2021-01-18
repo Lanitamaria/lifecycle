@@ -9,3 +9,18 @@ nav {
         font-weight: 700;
     }
 }
+
+h1 {
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 0.9rem;
+}
+
+.big-home {
+    background: url('map.svg') top right;
+    background-repeat: no-repeat;
+    background-size: 700px 400px;
+    height: calc(100vh - 20px);
+}

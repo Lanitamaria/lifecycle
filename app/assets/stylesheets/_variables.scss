@@ -2,3 +2,20 @@
 
 $primary-color: #023e8a;
 $secondary-color: #0e9fa4;
+$white: #fff;
+
+/*********** BUTTONS *************/
+
+a {
+    color: $secondary-color;
+    font-weight: 500;
+}
+
+.btn {
+    padding: 0.6rem 1.2rem;
+}
+
+.primary, .primary:hover  {
+    background: $primary-color;
+    color: $white;
+} 

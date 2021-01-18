@@ -1,2 +1,2 @@
-class Candidate < ApplicationRecord
+class Candidate < User
 end
