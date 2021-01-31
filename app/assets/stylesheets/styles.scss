@@ -22,5 +22,31 @@ p {
     background: url('map.svg') top right;
     background-repeat: no-repeat;
     background-size: 700px 400px;
-    height: calc(100vh - 20px);
+    height: calc(100vh - 130px);
+}
+
+.btn .fa {
+    font-size: 22px;
+    padding-right: 0.6em;
+}
+
+
+.btn-google {
+    background-color: #fcfcfc;
+
+    .google-icon-svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 0.6em;
+    }
+    .contrast {
+        color: #757575;
+    }
+    &:hover {
+        background-color: #f2f2f2;
+    }
+}
+
+.social-text {
+    text-align: center;
 }

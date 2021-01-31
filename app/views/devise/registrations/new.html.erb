@@ -33,11 +33,11 @@
 
   <div class="form-group">
     <%= f.label :role %>
-    <%= f.select :role, options_for_select([['Company', 'company'], ['Candidate', 'candidate']]), {prompt: "Selecciona el rol correspondiente..."}, class: "form-control" %>
+    <%= f.select :role, options_for_select([ ['Candidate', 'candidate'],['Company', 'company']]), {prompt: "Selecciona el rol correspondiente..."}, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: 'btn btn-primary' %>
   </div>
 <% end %>
 

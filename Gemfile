@@ -33,8 +33,10 @@ gem 'pg'
 gem 'devise'
 gem 'dotenv-rails'
 gem "font-awesome-rails"
+gem 'bootstrap-social-rails'
 gem 'cancancan'
 gem 'omniauth-linkedin-oauth2'
+gem 'omniauth-google-oauth2'
 gem 'activerecord-session_store'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

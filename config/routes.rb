@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+  resources :skills
   get 'company/index'
   get 'candidate/index'
   devise_for :users, controllers: {
-        sessions: 'users/sessions'
+        sessions: 'users/sessions',
+        registrations: 'users/registrations',
+        omniauth_callbacks: 'users/omniauth_callbacks',
+        skills: 'skills/index'
       }
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'home/index'

@@ -2,7 +2,7 @@
 <nav class="row navbar navbar-expand-lg bg-white shadow-sm">
     <div class="container">
         <%= image_tag("lf.svg", data: { title: 'LifeCycle Logo' }, height: '50', width: '50', class: 'd-inline-block align-top') %>
-        <%= link_to "LifeCycle", home_index_path, class: 'navbar-brand ml-2'  %>
+        <%= link_to "LifeCycle", root_path, class: 'navbar-brand ml-2'  %>
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                 <li class="nav-item text-center">
@@ -21,13 +21,19 @@
                     <%= link_to "Salir", destroy_user_session_path, method: :delete, class: 'ml-1 navbar-link'  %>
                 <% else %>
                     <%= link_to "Registrarse", new_user_registration_path, class: 'btn btn-outline-info my-2 my-sm-0'  %>
-                    <%= link_to "Iniciar Sesión", new_user_session_path, class: 'btn primary my-2 my-sm-0' %>
+                    <%= link_to "Iniciar Sesión", new_user_session_path, class: 'btn btn-primary my-2 my-sm-0' %>
                 <% end %>
             </div>
         </div>
     </div>
 </nav>
 
+<% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
 <%
 
 =begin%>
