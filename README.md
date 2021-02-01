@@ -10,7 +10,12 @@ https://trello.com/invite/b/QH5aR0Fb/e3fd38d38de4e5d346731f9b97c534da/lifecycle
 
 https://xd.adobe.com/view/58222b21-92a6-4839-9820-511e1fae1632-0d71/
 
+para ver el panel de admin:
+http://localhost:3000/admin
 
+accesos de admin:
+anita@mail.com
+password
 
 Things you may want to cover:
 

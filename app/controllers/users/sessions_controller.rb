@@ -9,9 +9,17 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # POST /resource/sign_in
-  # def create
-  #   super
-  # end
+  def create
+    respond_to do |format|
+      format.json do 
+        self.resource = warden.authenticate!(scope: resource_name, recall: "#{controller_path}#new")
+        render status: 200, json: resource
+      end
+      format.html do 
+        super
+      end
+    end
+  end
 
   # DELETE /resource/sign_out
   # def destroy
@@ -22,9 +30,12 @@ class Users::SessionsController < Devise::SessionsController
     # Here you can write logic based on roles to return different after sign in paths
     if current_user.candidate?
       candidate_index_path
-    else
+    elsif
       current_user.company?
       company_index_path
+    else
+      current_user.admin
+      redirect_to rails_admin_url
     end
   end
 

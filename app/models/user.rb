@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:linkedin, :google_oauth2]
 
-  enum role: [:company, :candidate]
+  enum role: [:company, :candidate, :admin]
 
   def self.from_omniauth(auth)
     where(email: auth.info.email).first_or_create do |user|

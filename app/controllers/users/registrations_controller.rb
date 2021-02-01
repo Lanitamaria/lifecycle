@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
+  protect_from_forgery with: :exception
+  before_action :authenticate_user!
   before_action :configure_sign_up_params, if: :devise_controller?
 
   # GET /resource/sign_up
@@ -54,8 +56,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def after_sign_up_path_for(user)
     if user.candidate?
       candidate_index_path
-    else
+    elsif user.company?
       company_index_path
+    else
+      current_user.admin?
+      redirect_to rails_admin_url
     end
   end
 
